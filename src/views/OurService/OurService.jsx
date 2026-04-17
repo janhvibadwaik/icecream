@@ -1,7 +1,12 @@
+import Navbar from './../../components/Navbar/Navbar';
 import './OurService.css';
+
 function OurService() {
   return (
-    <div>OurService</div>
+    <div>
+      <Navbar />
+      <div>OurService</div>
+    </div>
   )
 }
 

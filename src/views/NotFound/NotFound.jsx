@@ -1,7 +1,12 @@
+import Navbar from './../../components/Navbar/Navbar';
 import './NotFound.css';
+
 function NotFound() {
   return (
-    <div>NotFound</div>
+    <div>
+      <Navbar />
+      <div>NotFound</div>
+    </div>
   )
 }
 
