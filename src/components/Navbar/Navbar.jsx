@@ -2,15 +2,40 @@ import { FileUser, HeartHandshake, House, PhoneCall } from "lucide-react";
 import { Link } from "react-router";
 
 import "./Navbar.css";
+const NavConfig=[
+  {
+    name:"home",
+    icon:<House className="menu-icon"/>,
+    title:"Home",
+    path:"/"
+  },
+  {
+    name:"about",
+    icon:<FileUser className="menu-icon"/>,
+    title:"About",
+    path:"/about"
+  },
+  {
+    name:"ourservice",
+    icon:<PhoneCall className="menu-icon"/>,
+    title:"Our Service",
+    path:"/ourservice"
+  },
+  {
+    name:"contact",
+    icon:<HeartHandshake className="menu-icon"/>,
+    title:"Contact",
+    path:"/contact"
+  }
+]
 function Navbar({ active }) {
-    console.log(active);
   return (
     <div className="navbar">
-        <Link to="/" className={`menu-item ${active === "home" ? "active-menu" : ""}`}><House className="menu-icon"/>Home</Link>&nbsp;&nbsp;
-        <Link to="/about" className={`menu-item ${active === "about" ? "active-menu" : ""}`}><FileUser className="menu-icon"/>About</Link>&nbsp;&nbsp;
-        <Link to="/ourservice" className={`menu-item ${active === "ourservice" ? "active-menu" : ""}`}><PhoneCall className="menu-icon"/>Our Service</Link>&nbsp;&nbsp;
-        <Link to="/contact" className={`menu-item ${active === "contact" ? "active-menu" : ""}`}><HeartHandshake className="menu-icon"/>Contact</Link>
-            
+      {NavConfig.map((menuItem)=>{
+        return (
+          <Link to={menuItem.path} className={`menu-item ${active === menuItem.name ? "active-menu" : ""}`}>{menuItem.icon}{menuItem.title}</Link>
+        );
+      })}
     </div>
   )
 }
