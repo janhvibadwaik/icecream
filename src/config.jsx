@@ -1,3 +1,4 @@
+import { ChefHat, Cuboid, Truck, UtensilsCrossed } from 'lucide-react';
 import Img1 from './assets/ice-cream-1.png';
 import Img10 from './assets/ice-cream-10.png';
 import Img2 from './assets/ice-cream-2.png';
@@ -8,7 +9,28 @@ import Img6 from './assets/ice-cream-6.png';
 import Img7 from './assets/ice-cream-7.png';
 import Img8 from './assets/ice-cream-8.png';
 import Img9 from './assets/ice-cream-9.png';
-
+const OUR_SERVICES=[
+    {id:1,
+    title:"Dine-In",
+    description:"Enjoy our delicious ice cream in a cozy and welcoming atmosphere. Our dine-in service offers a comfortable space for you to relax and savor your favorite flavors.",
+    icon:<UtensilsCrossed height={"70px"} width={"70px"}/>
+    },
+    {id:2,
+    title:"Takeaway",
+    description:"Craving our ice cream on the go? Our takeaway service allows you to grab your favorite flavors and enjoy them wherever you like. Perfect for a quick treat or a picnic in the park.",
+    icon:<Cuboid height={"70px"} width={"70px"}/>
+    },
+    {id:3,
+    title:"Delivery",
+    description:"Can't make it to our shop? No problem! We offer delivery services so you can enjoy our delicious ice cream from the comfort of your home. Just place your order and we'll bring the sweetness to you.",
+    icon:<Truck height={"70px"} width={"70px"}/>
+    },
+    {id:4,
+    title:"Catering",
+    description:"Planning a special event? Our catering service provides a delightful selection of our ice cream flavors for your guests. Whether it's a birthday party, wedding, or corporate event, we have the perfect treats to make it memorable.",
+    icon:<ChefHat height={"70px"} width={"70px"}/>
+    },
+]
 const PRODUCTS=[{
     id:1,
     title:"IceCream Sandwich",
@@ -75,4 +97,4 @@ const PRODUCTS=[{
     price:190,
     image:Img10
 },];
-export default PRODUCTS;
+export { OUR_SERVICES, PRODUCTS };

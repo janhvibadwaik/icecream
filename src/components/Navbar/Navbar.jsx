@@ -31,9 +31,13 @@ const NavConfig=[
 function Navbar({ active }) {
   return (
     <div className="navbar">
-      {NavConfig.map((menuItem)=>{
+      {NavConfig.map((menuItem,index)=>{
         return (
-          <Link to={menuItem.path} className={`menu-item ${active === menuItem.name ? "active-menu" : ""}`}>{menuItem.icon}{menuItem.title}</Link>
+          <Link to={menuItem.path} className={`menu-item ${active === menuItem.name ? "active-menu" : ""}`}
+          key={index}>
+            {menuItem.icon}
+            {menuItem.title}
+            </Link>
         );
       })}
     </div>
