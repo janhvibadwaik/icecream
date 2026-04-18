@@ -1,0 +1,26 @@
+.navbar{
+    background-color: #ffa31a;
+    padding:10px 20px;
+    border-radius: 50px;
+    margin:20px;
+}
+.menu-item{
+    text-decoration: none;
+    color:black;
+    margin: 0px 10px;
+    display: inline-flex;
+    align-items: center;
+}
+.menu-item:hover{
+    color:white;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+.menu-icon{
+    height: 20px;
+}
+.active-menu{
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}

@@ -1,13 +1,18 @@
+import BodyContainer from './../../components/BodyContainer/BodyContainer';
+import Footer from './../../components/Footer/Footer';
 import Navbar from './../../components/Navbar/Navbar';
 import './Contact.css';
 
 function Contact() {
   return (
     <div>
-      <Navbar />
-      <div>Contact</div>
+    <Navbar active="contact"/>
+    <BodyContainer>
+        <h1>Contact</h1>
+      </BodyContainer>
+      <Footer />
     </div>
   )
 }
 
-export default Contact
+export default Contact;
